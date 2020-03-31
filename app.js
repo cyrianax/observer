@@ -1,3 +1,9 @@
-const Koa = require('koa')
+const { app, db, util } = require('./core')
+const middlewares = require('./middleware')
+const { port } = require('./config')
 
-const app = new Koa()
+app.run({
+  port,
+  middlewares,
+  context: { db, util }
+})
