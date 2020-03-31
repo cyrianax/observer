@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const config = require('../config')
-const { article } = require('../schema')
+const { article, task } = require('../schema')
 
 mongoose.Promise = global.Promise
 mongoose.connect(config.db, { 
@@ -15,5 +15,6 @@ db.on('connected', () => {
 })
 
 db.model('Article', article)
+db.model('Task', task)
 
 module.exports = db

@@ -11,8 +11,7 @@ const useAPI = list => {
 }
 
 useAPI([
-  'public',
-  'content',
+  'task',
 ])
 
 module.exports = router
