@@ -13,8 +13,12 @@ const schema = new Schema({
 	},
 	// 文章来源
 	frequency: { 
-		type: String, 
+		type: Number, 
 		required: true 
+	},
+	target: {
+		type: Object,
+		required: true
 	},
 	// 
 	start: {

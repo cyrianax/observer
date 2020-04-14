@@ -13,6 +13,9 @@ const db = mongoose.connection
 db.on('connected', () => {
   console.log('--- Database has connected ---')
 })
+db.on('close', () => {
+  console.log('--- Database has closed ---')
+})
 
 db.model('Article', article)
 db.model('Task', task)
